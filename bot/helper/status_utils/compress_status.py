@@ -4,7 +4,7 @@ from bot import LOGGER, DOWNLOAD_DIR
 from bot.helper.ext_utils.bot_utils import TaskStatus, get_readable_file_size, get_readable_time
 from bot.helper.ext_utils.fs_utils import get_path_size
 
-class ExtractStatus:
+class CompressStatus:
     def __init__(self, name, size, gid, listener):
         self.__name = name
         self.__size = size
@@ -49,7 +49,7 @@ class ExtractStatus:
             return '-'
 
     def status(self):
-        return TaskStatus.STATUS_EXTRACTING
+        return TaskStatus.STATUS_COMPRESSING
 
     def processed_bytes(self):
         return get_path_size(f"{DOWNLOAD_DIR}{self.__uid}") - self.__size
@@ -58,7 +58,7 @@ class ExtractStatus:
         return self
 
     def cancel_task(self):
-        LOGGER.info(f"Cancelling extract: {self.__name}")
+        LOGGER.info(f"Cancelling compress: {self.__name}")
         if self.__listener.suproc is not None:
             self.__listener.suproc.kill()
-        self.__listener.onUploadError("The extraction task has been cancelled")
+        self.__listener.onUploadError("The compression task has been cancelled")

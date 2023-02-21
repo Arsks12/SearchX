@@ -1,12 +1,11 @@
 dnspython
 google-api-python-client
 google-auth-oauthlib
-lxml
 psutil
 pymongo
 python-dotenv
 python-magic
-python-telegram-bot
+python-telegram-bot==13.15
 requests
 telegraph
 tenacity

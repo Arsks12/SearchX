@@ -1,28 +1,30 @@
-class _BotCommands:
+class __BotCommands:
+
     def __init__(self):
         self.StartCommand = 'start'
         self.ListCommand = 'find'
         self.CloneCommand = 'clone'
-        self.ArchiveCommand = 'archive'
+        self.CompressCommand = 'compress'
         self.ExtractCommand = 'extract'
         self.CountCommand = 'count'
         self.CancelCommand = 'cancel'
         self.StatusCommand = 'status'
         self.PermissionCommand = 'share'
         self.DeleteCommand = 'del'
-        self.AuthorizeCommand = 'authorize'
-        self.UnauthorizeCommand = 'unauthorize'
+        self.AddBookmarkCommand = 'addbm'
+        self.RemBookmarkCommand = 'rembm'
+        self.BookmarksCommand = 'bookmarks'
+        self.AuthorizeCommand = 'auth'
+        self.UnauthorizeCommand = 'unauth'
         self.UsersCommand = 'users'
-        self.ListKeysCommand = 'listkeys'
         self.ShellCommand = 'shell'
         self.EvalCommand = 'eval'
         self.ExecCommand = 'exec'
         self.ClearLocalsCommand = 'clearlocals'
-        self.ExecHelpCommand = 'exechelp'
         self.PingCommand = 'ping'
         self.StatsCommand = 'stats'
         self.LogCommand = 'log'
         self.RestartCommand = 'restart'
         self.HelpCommand = 'help'
 
-BotCommands = _BotCommands()
+BotCommands = __BotCommands()
